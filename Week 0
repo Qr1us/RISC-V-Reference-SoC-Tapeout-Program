@@ -1,0 +1,62 @@
+# 🖥️ VSD RISC-V SoC Labs – Setup & Documentation
+
+This repository contains my work for the **VSD RISC-V SoC Labs Program**.  
+It documents the learning journey, starting from tool installations to SoC design workflows.
+
+---
+
+## 📌 Task 1 – GitHub Repo Creation & Summary
+
+- ✅ Created this GitHub repository to document my progress.  
+- ✅ Added initial README with program summary and references.  
+- 📖 Reference repo: [sfal-vsd](https://github.com/sukanyasmeher/sfal-vsd?tab=readme-ov-file#day-0---tools-installation)  
+
+---
+
+## 📌 Task 2 – Tool Installation & Snapshots
+
+Installed all required tools on **Ubuntu 20.04** running inside **Oracle VirtualBox**.  
+System configuration:  
+- **RAM:** 6 GB  
+- **HDD:** 50 GB  
+- **vCPU:** 4  
+
+### 🔧 Installed Tools
+1. **Yosys** – RTL synthesis tool  
+   ```bash
+   git clone https://github.com/YosysHQ/yosys.git
+   cd yosys
+   make config-gcc
+   make
+   sudo make install
+2.Icarus Verilog (iverilog) – Verilog simulator
+
+sudo apt-get install iverilog
+
+3.GTKWave – Waveform viewer
+
+sudo apt-get install gtkwave
+
+4.ngspice – Analog/mixed-signal simulator
+
+tar -zxvf ngspice-37.tar.gz
+cd ngspice-37/release
+../configure --with-x --with-readline=yes --disable-debug
+make
+sudo make install
+
+5.Magic – Layout tool
+
+git clone https://github.com/RTimothyEdwards/magic
+cd magic
+./configure
+make
+make install
+
+6.OpenLANE – Digital design flow
+
+git clone https://github.com/The-OpenROAD-Project/OpenLane
+cd OpenLane
+make
+make test
+
